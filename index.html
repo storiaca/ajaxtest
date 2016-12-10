@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ajax</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>GET Form</h2>
+
+			  	</div>
+			  	<div class="col-md-6 post-form">
+
+			  	</div>
+			  	<div class="col-md-6">
+			  		<h2>Post Form</h2>
+			  		<form action="" method="post" autocomplete="off">
+			  			<div class="form-group">
+						    <label for="firstname">First Name</label>
+						    <input type="text" class="form-control" id="firstname" name="firstname">
+					  	</div>
+					  	<div class="form-group">
+						    <label for="select">Select</label>
+							<select class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							</select>
+
+					  	</div>
+					  	<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    Option one is this and that&mdash;be sure to include why it's great
+						  </label>
+						</div>
+						<input type="submit" class="btn btn-default" value"Send">
+			  		</form>
+			  	</div>
+				<div class="col-md-6">
+					<div class="script-practice">
+						<h2>Javascript practice</h2>
+
+					</div>
+				</div>
+			</div><!--  /.row -->
+		</div> <!-- /.wrapper -->
+	</div> <!-- /.contaoiner -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+	$(function() {
+		var animals = [
+			{name: 'Fluffykins', species: 'rabbit'},
+			{name: 'Caro', species: 'dog'},
+			{name: 'Hamilton', species: 'dog'},
+			{name: 'Harlod', species: 'fish'},
+			{name: 'Ursula', species: 'cat'},
+			{name: 'Jimmy', species: 'fish'},
+		];
+
+		var names = animals.map(function(animal){
+			return animal.name + ' is a ' + animal.species;
+		});
+		// var names = [];
+		// for(var i = 0; i < animals.length; i++) {
+		// 	names.push(animals[i].name);
+		// }
+
+		console.log(names);
+
+		var orders = [
+			{ amount: 250 },
+			{ amount: 400 },
+			{ amount: 100 },
+			{ amount: 325 }
+		];
+
+		var totalAmount = orders.reduce(function(sum, order){
+			console.log("hello", sum, order);
+			return sum + order.amount;
+		}, 0);
+		// var totalAmount = 0;
+		// for(var i = 0; i < orders.length; i++) {
+		// 	totalAmount += orders[i].amount;
+		// }
+
+		console.log(totalAmount);
+	}); //end ready
+</script>
+
+</body>
+</html>

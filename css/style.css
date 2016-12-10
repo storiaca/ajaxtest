@@ -1,0 +1,15 @@
+.wrapper {
+	padding: 10%;
+}
+
+.result-get {
+	font-size: 1em;
+	background: #1cde2b;
+	color: #fff;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.post-form input {
+	margin: 20px 0;
+}
